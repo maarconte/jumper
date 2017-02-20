@@ -1,0 +1,32 @@
+.index_page {
+	float: none !important;
+	width: 80vw !important;
+	margin: 0 auto !important;
+}
+
+.category_list{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	.category_box {
+	border: solid 1px #ccc;
+	margin: 10px 5px 0;
+	//height: 250px;
+	width: calc(33% - 10px);
+	border-radius: 8px;
+	position: relative;
+	padding: 10px;
+	.header_box{
+		height: 150px;
+		border-radius: 8px;
+		width: 100%;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+	figcaption {
+		padding: 10px 0;
+		text-align: center;
+	}
+}
+}
