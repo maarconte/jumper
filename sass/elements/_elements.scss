@@ -1,20 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600');
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+body {
+	background: $color__background-body;
+	font-family: 'Poppins', sans-serif;
+	/* Fallback for when there is no custom background color defined. */
+}
+blockquote,
+q {
+	quotes: "" "";
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+@import "lists";
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+}
+figure {
+	margin: 1em 0;
+	/* Extra wide images within figure tags don't overflow the content area. */
+}
+.has-header-image.home.blog .custom-header {
+	height: 55vh;
+}
+header {
+	.site-branding {
+		//text-align: center;
+		padding-bottom: 30px;
+		position: relative;
+		overflow: hidden;
+		.wrap {
+			background-color: rgba(255, 255, 255, 1);
+			width: 100%;
+			padding: 15px;
+			max-width: inherit;
+			margin-left: 230px;
+			padding-left: 30px;
+		}
+		.site-title a {
+			color: #222 !important;
+		}
+	}
+}
+.site_icon {
+	border-radius: 50%;
+	position: absolute;
+	bottom: -50px;
+	left: 50px;
+	height: 200px;
+	width: 200px;
+	border: solid 15px rgba(255, 255, 255, 1);
+	z-index: 999;
+}
+.site-footer {
+	background-color: $color__background-footer;
+	.wrap {
+		display: flex;
+		padding-bottom: 0;
+	}
+	.widget-area {
+		padding-top: 1em;
+		padding-bottom: 0;
+		padding-left: 10rem;
+		flex-grow: 2;
+		.widget-column {
+			width: 100%;
+		}
+	}
+	.widget {
+		.widget-title {
+			display: none;
+		}
+		ul {
+			width: 100%;
+			justify-content: center;
+			display: flex;
+			li {
+				border-bottom: none;
+				border-top: none;
+				position: relative;
+				display: inline-block;
+				margin-right: 3rem;
+				a {
+					color: white;
+					box-shadow: none;
+					margin-left: 35px;
+					&:before {
+						position: absolute;
+						top: 5px;
+						left: 0;
+						content: " ";
+						display: block;
+						background-image: url(http://goodmorningkorea.fr/wp-content/uploads/2017/02/korea.svg);
+						background-size: 25px 25px;
+						height: 25px;
+						width: 25px;
+						position: absolute;
+					}
+					&:hover {
+						color: white;
+						box-shadow: inset 0 0 0 rgba(255, 255, 255, 0), 0 3px 0 rgba(255, 255, 255, 1);
+					}
+				}
+			}
+		}
+	}
+	.social-navigation {
+		width: inherit;
+		a {
+			background-color: transparent;
+		}
+		.icon {
+			height: 30px;
+			width: 30px;
+		}
+	}
+}
+@import "tables";@import url('https://fonts.googleapis.com/css?family=Poppins');
 html {
 	box-sizing: border-box;
 }
 
 *,
 *:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
 }
 
 body {
-	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	background: $color__background-body;
+	font-family: 'Poppins', sans-serif;
+	/* Fallback for when there is no custom background color defined. */
 }
 
-blockquote, q {
+blockquote,
+q {
 	quotes: "" "";
-
 	&:before,
 	&:after {
 		content: "";
@@ -29,17 +169,112 @@ hr {
 }
 
 @import "lists";
-
 img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
 }
 
 figure {
-	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+	margin: 1em 0;
+	/* Extra wide images within figure tags don't overflow the content area. */
 }
 
 .has-header-image.home.blog .custom-header {
 	height: 55vh;
 }
+
+header {
+	.site-branding {
+		//text-align: center;
+		padding-bottom: 30px;
+		position: relative;
+		overflow: hidden;
+		.wrap {
+			background-color: rgba(255, 255, 255, 1);
+			width: 100%;
+			padding: 15px;
+			max-width: inherit;
+			margin-left: 230px;
+			padding-left: 30px;
+		}
+		.site-title a {
+			color: #222 !important;
+		}
+	}
+}
+
+.site_icon {
+	border-radius: 50%;
+	position: absolute;
+	bottom: -50px;
+	left: 50px;
+	height: 200px;
+	width: 200px;
+	border: solid 15px rgba(255, 255, 255, 1);
+	z-index: 999;
+}
+
+.site-footer {
+	background-color: $color__background-footer;
+	.wrap {
+		display: flex;
+		padding-bottom: 0;
+	}
+	.widget-area {
+		padding-top: 1em;
+		padding-bottom: 0;
+		padding-left: 10rem;
+		flex-grow: 2;
+		.widget-column {
+			width: 100%;
+		}
+	}
+	.widget {
+		.widget-title {
+			display: none;
+		}
+		ul {
+			width: 100%;
+			justify-content: center;
+			display: flex;
+			li {
+				border-bottom: none;
+				border-top: none;
+				position: relative;
+				display: inline-block;
+				margin-right: 3rem;
+				a {
+					color: white;
+					box-shadow: none;
+					margin-left: 35px;
+					&:before {
+						position: absolute;
+						top: 5px;
+						left: 0;
+						content: " ";
+						display: block;
+						background-image: url(http://goodmorningkorea.fr/wp-content/uploads/2017/02/korea.svg);
+						background-size: 25px 25px;
+						height: 25px;
+						width: 25px;
+						position: absolute;
+					}
+				}
+			}
+		}
+	}
+	.social-navigation {
+		width: inherit;
+		a {
+			background-color: transparent;
+		}
+		.icon {
+			height: 30px;
+			width: 30px;
+		}
+	}
+}
+
 @import "tables";

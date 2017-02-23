@@ -29,7 +29,7 @@ foreach( $categories as $category ) {
 	$category_name = $category->name ;
 	$category_id = $category->term_id; ?> 
 <figure class="category_box">
- <div class="header_box" style="background-image:url('<?php the_field('image', 'category_'.$category_id); ?>')"></div>
+ <a href="<?php echo $category_link ?>"><div class="header_box" style="background-image:url('<?php the_field('image', 'category_'.$category_id); ?>')"></div></a>
     <figcaption><a href="<?php echo $category_link ?>"><?php echo $category_name ?></a></figcaption>
 </figure>
    
