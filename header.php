@@ -40,7 +40,7 @@
 			</div><!-- .navigation-top -->
 		<?php endif; ?>
 <!--		<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/b.svg" alt="">-->
-		<img src="<?php echo get_site_icon_url() ?>" alt="" class=" class site_icon">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">	<img src="<?php echo get_site_icon_url() ?>" alt="" class=" class site_icon"></a>
 
 	</header><!-- #masthead -->
 
