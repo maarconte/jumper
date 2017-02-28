@@ -13,6 +13,13 @@ function theme_enqueue_styles() {
 
 }
 
+function add_theme_scripts() {
+$js_directory = get_stylesheet_directory_uri() . '/js/';
+  wp_register_script( 'global', $js_directory . 'sticky_sidebar.js', 'jquery', '1.0' );
+	wp_enqueue_script( 'global' );
+}
+add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
+
 if ( ! function_exists( 'jumper_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.

@@ -15,15 +15,15 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: functions.php:53
+#: functions.php:60
 msgid "Primary"
 msgstr ""
 
-#: functions.php:96
+#: functions.php:103
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:98
+#: functions.php:105
 msgid "Add widgets here."
 msgstr ""
 

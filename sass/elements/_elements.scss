@@ -156,7 +156,22 @@ header {
 .has-sidebar #secondary {
 	width: 25%;
 }
+
+#secondary:not(.sticky){
+	top:0;
+}
+#secondary.sticky{
+/*	position: fixed; */
+/*	top:0; 					 */
+	right: 0; 			
+	position: absolute;
+}
+#secondary.sticky.stickyBottom{
+	position: absolute;
+	/* transform:translateY(-100%)!important; */
+}
 .wrap {
 	max-width: 1200px;
+	position: relative;
 }
 @import "tables";
