@@ -16,9 +16,7 @@ get_header(); ?>
 
 	<?php if ( have_posts() ) : ?>
 		<header class="page-header">
-			<?php
-			$archive_title = str_replace('Category: ','',get_the_archive_title()); ?>
-			<h1 class="page-title"><?php echo $archive_title; ?></h1>
+			<h1 class="page-title"><?php single_cat_title(); ?></h1>
 			<?php	the_archive_description( '<div class="taxonomy-description">', '</div>' );
 			?>
 		</header><!-- .page-header -->
