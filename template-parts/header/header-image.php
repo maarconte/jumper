@@ -14,14 +14,16 @@
 	<div class="custom-header-media">
 	<?php if ( is_home() ) { ?>
 		<?php the_custom_header_markup(); ?>
-	<?php } else if (is_archive()) { 
-		$category = str_replace('Category: ','',get_the_archive_title());;
-		$category_id = get_cat_ID($category);
+	<?php } else if (is_archive() || is_single()) { 
+		$categories = get_the_category(); 
+		$category_id = $categories[0]->term_id;
 		?>
 		<img src="<?php the_field('image', 'category_'.$category_id); ?>" alt="">
-	<?php }?>
+	<?php } else if (is_page()) {
+		the_post_thumbnail();
+}
+		?>
 	<p> <?php echo $category ;?></p>
 	</div>
-
 	<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
 </div><!-- .custom-header -->
