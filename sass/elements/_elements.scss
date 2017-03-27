@@ -50,6 +50,9 @@ figure {
 }
 
 header {
+	.custom-header {
+		height: 45vh !important;
+	}
 	.site-branding {
 		//text-align: center;
 		width: 100%;
@@ -88,12 +91,14 @@ header {
 }
 .site-footer {
 	background-color: $color__background-footer;
+	//height: 80px;
 	.wrap {
 		display: flex;
 		padding-bottom: 0;
+		padding-top: 1em;
 	}
 	.widget-area {
-		padding-top: 1em;
+		padding-top: .5em;
 		padding-bottom: 0;
 		padding-left: 10rem;
 		flex-grow: 2;
@@ -102,6 +107,7 @@ header {
 		}
 	}
 	.widget {
+		padding-bottom: 1.5rem;
 		.widget-title {
 			display: none;
 		}
@@ -163,7 +169,7 @@ header {
 #secondary.sticky{
 /*	position: fixed; */
 /*	top:0; 					 */
-	right: 0; 			
+	right: 0;
 	position: absolute;
 }
 #secondary.sticky.stickyBottom{
