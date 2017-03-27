@@ -36,7 +36,10 @@
 	<div class="entry-content">
 		<?php
 			if (is_archive() ) : the_excerpt();
-			else : /* translators: %s: Name of current post */
+				if (has_excerpt() ) : ?>
+					<a href="<?php echo get_permalink(); ?>"> Continue reading</a>
+				<?php endif; ?>
+		<?php	else : /* translators: %s: Name of current post */
 			the_content( sprintf(
 				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
 				get_the_title()
